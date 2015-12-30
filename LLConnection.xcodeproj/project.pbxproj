@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		3ED0C9E01C33DD1400A5EC06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9DF1C33DD1400A5EC06 /* main.m */; };
-		3ED0C9E31C33DD1400A5EC06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9E21C33DD1400A5EC06 /* AppDelegate.m */; };
-		3ED0C9E61C33DD1400A5EC06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9E51C33DD1400A5EC06 /* ViewController.m */; };
-		3ED0C9E91C33DD1400A5EC06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0C9E71C33DD1400A5EC06 /* Main.storyboard */; };
+		3ED0C9E31C33DD1400A5EC06 /* LLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9E21C33DD1400A5EC06 /* LLAppDelegate.m */; };
+		3ED0C9E61C33DD1400A5EC06 /* LLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9E51C33DD1400A5EC06 /* LLViewController.m */; };
 		3ED0C9EB1C33DD1400A5EC06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0C9EA1C33DD1400A5EC06 /* Assets.xcassets */; };
 		3ED0C9EE1C33DD1400A5EC06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0C9EC1C33DD1400A5EC06 /* LaunchScreen.storyboard */; };
 		3ED0C9F91C33DD1400A5EC06 /* LLConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9F81C33DD1400A5EC06 /* LLConnectionTests.m */; };
 		3ED0CA041C33DD1400A5EC06 /* LLConnectionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0CA031C33DD1400A5EC06 /* LLConnectionUITests.m */; };
+		3ED0CA1A1C34028E00A5EC06 /* LLDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0CA191C34028E00A5EC06 /* LLDownloaderOperation.m */; };
+		3ED0CA1D1C3419A200A5EC06 /* LLDownloaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0CA1C1C3419A200A5EC06 /* LLDownloaderManager.m */; };
+		3ED0CA221C341D6B00A5EC06 /* UIView+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0CA211C341D6B00A5EC06 /* UIView+Property.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +39,10 @@
 /* Begin PBXFileReference section */
 		3ED0C9DB1C33DD1400A5EC06 /* LLConnection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLConnection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED0C9DF1C33DD1400A5EC06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3ED0C9E11C33DD1400A5EC06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		3ED0C9E21C33DD1400A5EC06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3ED0C9E41C33DD1400A5EC06 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3ED0C9E51C33DD1400A5EC06 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3ED0C9E81C33DD1400A5EC06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3ED0C9E11C33DD1400A5EC06 /* LLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAppDelegate.h; sourceTree = "<group>"; };
+		3ED0C9E21C33DD1400A5EC06 /* LLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLAppDelegate.m; sourceTree = "<group>"; };
+		3ED0C9E41C33DD1400A5EC06 /* LLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLViewController.h; sourceTree = "<group>"; };
+		3ED0C9E51C33DD1400A5EC06 /* LLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLViewController.m; sourceTree = "<group>"; };
 		3ED0C9EA1C33DD1400A5EC06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3ED0C9ED1C33DD1400A5EC06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ED0C9EF1C33DD1400A5EC06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +52,13 @@
 		3ED0C9FF1C33DD1400A5EC06 /* LLConnectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLConnectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED0CA031C33DD1400A5EC06 /* LLConnectionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLConnectionUITests.m; sourceTree = "<group>"; };
 		3ED0CA051C33DD1400A5EC06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ED0CA181C34028E00A5EC06 /* LLDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLDownloaderOperation.h; sourceTree = "<group>"; };
+		3ED0CA191C34028E00A5EC06 /* LLDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLDownloaderOperation.m; sourceTree = "<group>"; };
+		3ED0CA1B1C3419A200A5EC06 /* LLDownloaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLDownloaderManager.h; sourceTree = "<group>"; };
+		3ED0CA1C1C3419A200A5EC06 /* LLDownloaderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLDownloaderManager.m; sourceTree = "<group>"; };
+		3ED0CA1E1C341D2500A5EC06 /* LLPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPch.pch; sourceTree = "<group>"; };
+		3ED0CA201C341D6B00A5EC06 /* UIView+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Property.h"; sourceTree = "<group>"; };
+		3ED0CA211C341D6B00A5EC06 /* UIView+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Property.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		3ED0C9D21C33DD1400A5EC06 = {
 			isa = PBXGroup;
 			children = (
+				3ED0CA1F1C341D2A00A5EC06 /* LLCore */,
 				3ED0C9DD1C33DD1400A5EC06 /* LLConnection */,
 				3ED0C9F71C33DD1400A5EC06 /* LLConnectionTests */,
 				3ED0CA021C33DD1400A5EC06 /* LLConnectionUITests */,
@@ -101,11 +110,14 @@
 		3ED0C9DD1C33DD1400A5EC06 /* LLConnection */ = {
 			isa = PBXGroup;
 			children = (
-				3ED0C9E11C33DD1400A5EC06 /* AppDelegate.h */,
-				3ED0C9E21C33DD1400A5EC06 /* AppDelegate.m */,
-				3ED0C9E41C33DD1400A5EC06 /* ViewController.h */,
-				3ED0C9E51C33DD1400A5EC06 /* ViewController.m */,
-				3ED0C9E71C33DD1400A5EC06 /* Main.storyboard */,
+				3ED0C9E11C33DD1400A5EC06 /* LLAppDelegate.h */,
+				3ED0C9E21C33DD1400A5EC06 /* LLAppDelegate.m */,
+				3ED0C9E41C33DD1400A5EC06 /* LLViewController.h */,
+				3ED0C9E51C33DD1400A5EC06 /* LLViewController.m */,
+				3ED0CA1B1C3419A200A5EC06 /* LLDownloaderManager.h */,
+				3ED0CA1C1C3419A200A5EC06 /* LLDownloaderManager.m */,
+				3ED0CA181C34028E00A5EC06 /* LLDownloaderOperation.h */,
+				3ED0CA191C34028E00A5EC06 /* LLDownloaderOperation.m */,
 				3ED0C9EA1C33DD1400A5EC06 /* Assets.xcassets */,
 				3ED0C9EC1C33DD1400A5EC06 /* LaunchScreen.storyboard */,
 				3ED0C9EF1C33DD1400A5EC06 /* Info.plist */,
@@ -138,6 +150,16 @@
 				3ED0CA051C33DD1400A5EC06 /* Info.plist */,
 			);
 			path = LLConnectionUITests;
+			sourceTree = "<group>";
+		};
+		3ED0CA1F1C341D2A00A5EC06 /* LLCore */ = {
+			isa = PBXGroup;
+			children = (
+				3ED0CA1E1C341D2500A5EC06 /* LLPch.pch */,
+				3ED0CA201C341D6B00A5EC06 /* UIView+Property.h */,
+				3ED0CA211C341D6B00A5EC06 /* UIView+Property.m */,
+			);
+			name = LLCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +267,6 @@
 			files = (
 				3ED0C9EE1C33DD1400A5EC06 /* LaunchScreen.storyboard in Resources */,
 				3ED0C9EB1C33DD1400A5EC06 /* Assets.xcassets in Resources */,
-				3ED0C9E91C33DD1400A5EC06 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ED0C9E61C33DD1400A5EC06 /* ViewController.m in Sources */,
-				3ED0C9E31C33DD1400A5EC06 /* AppDelegate.m in Sources */,
+				3ED0C9E61C33DD1400A5EC06 /* LLViewController.m in Sources */,
+				3ED0CA221C341D6B00A5EC06 /* UIView+Property.m in Sources */,
+				3ED0C9E31C33DD1400A5EC06 /* LLAppDelegate.m in Sources */,
+				3ED0CA1D1C3419A200A5EC06 /* LLDownloaderManager.m in Sources */,
 				3ED0C9E01C33DD1400A5EC06 /* main.m in Sources */,
+				3ED0CA1A1C34028E00A5EC06 /* LLDownloaderOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +332,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3ED0C9E71C33DD1400A5EC06 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3ED0C9E81C33DD1400A5EC06 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3ED0C9EC1C33DD1400A5EC06 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LLPch.pch;
 				INFOPLIST_FILE = LLConnection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lin.LLConnection;
@@ -422,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = LLPch.pch;
 				INFOPLIST_FILE = LLConnection/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lin.LLConnection;
@@ -496,6 +514,7 @@
 				3ED0CA0A1C33DD1400A5EC06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3ED0CA0B1C33DD1400A5EC06 /* Build configuration list for PBXNativeTarget "LLConnectionTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +523,7 @@
 				3ED0CA0D1C33DD1400A5EC06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3ED0CA0E1C33DD1400A5EC06 /* Build configuration list for PBXNativeTarget "LLConnectionUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +532,7 @@
 				3ED0CA101C33DD1400A5EC06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

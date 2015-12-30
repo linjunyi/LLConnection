@@ -6,17 +6,20 @@
 //  Copyright © 2015年 lin. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "LLAppDelegate.h"
+#import "LLViewController.h"
 
-@interface AppDelegate ()
+@interface LLAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation LLAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = [[LLViewController alloc] init];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

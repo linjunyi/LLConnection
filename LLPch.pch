@@ -1,15 +1,14 @@
 //
-//  ViewController.h
+//  LLPch.pch
 //  LLConnection
 //
 //  Created by lin on 15/12/30.
 //  Copyright © 2015年 lin. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef LLPch_pch
+#define LLPch_pch
 
-@interface ViewController : UIViewController
+#import "UIView+Property.h"
 
-
-@end
-
+#endif
