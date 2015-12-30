@@ -15,4 +15,10 @@ typedef void(^LLProgressBlock)(float progress);
 
 - (instancetype)initWithURL:(NSURL *)url fileName:(NSString *)fileName completionBlock:(LLDownloaderBlock)completionBlock pregressBlock:(LLProgressBlock)pregressBlock;
 
+//取消下载
+- (void)cancel;
+
+//暂停下载
+- (void)pause;
+
 @end

@@ -40,19 +40,39 @@
 
 - (void)start {
     self.downloadData = [[NSMutableData alloc] init];
-    NSURLRequest *request = [NSURLRequest requestWithURL:self.url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:20.0];
+    NSString *cacheDir = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    self.downloadPath  = [NSString stringWithFormat:@"%@/%@", cacheDir, self.fileName];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    if ([fm fileExistsAtPath:self.downloadPath]) {
+        self.downloadData = [NSMutableData dataWithContentsOfFile:self.downloadPath];
+    }else {
+        [fm createFileAtPath:self.downloadPath contents:nil attributes:nil];
+    }
+    self.writeHandle   = [NSFileHandle fileHandleForWritingAtPath:self.downloadPath];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:self.url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:20.0];
+    NSString *range = [NSString stringWithFormat:@"bytes=%ld-", self.downloadData.length];//用于实现断点续传
+    [request setValue:range forHTTPHeaderField:@"Range"];                                 //
     self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [self.connection start];
     CFRunLoopRun(); //启动线程的runloop，使线程不离开start方法，否则connection的delegate方法不会被调用，因为start方法结束，对象的生命周期即终止
     if (!self.finish) {
-        [self connection:self.connection didFailWithError:[NSError errorWithDomain:NSURLErrorDomain code:NSURLErrorTimedOut userInfo:@{NSURLErrorFailingURLErrorKey : self.url}]];
+        NSLog(@"Download Fail");
     }
+}
+
+- (void)cancel {
+    [self.connection cancel];
+    CFRunLoopStop(CFRunLoopGetCurrent());
+}
+
+- (void)pause {
+    [self cancel];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
         NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-        if (httpResponse.statusCode != 200) {
+        if (httpResponse.statusCode >= 400) {
             NSLog(@"Download Fail");
             [self.connection cancel];
             CFRunLoopStop(CFRunLoopGetCurrent());
@@ -61,11 +81,6 @@
                 NSDictionary *allHeader = [httpResponse allHeaderFields];
                 self.totalLength = [allHeader objectForKey:@"Content-Length"];
             }
-            NSString *cacheDir = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-            self.downloadPath  = [NSString stringWithFormat:@"%@/%@", cacheDir, self.fileName];
-            [[NSFileManager defaultManager] createFileAtPath:self.downloadPath contents:nil attributes:nil];
-            self.writeHandle   = [NSFileHandle fileHandleForWritingAtPath:self.downloadPath];
-            
         }
     }
 }

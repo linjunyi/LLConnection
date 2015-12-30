@@ -13,6 +13,7 @@
 @interface LLViewController ()<LLDownloadDelegate>
 
 @property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UIButton    *startBtn;
 
 @end
 
@@ -22,7 +23,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.imageView];
-    LLDownloaderManager *manager = [[LLDownloaderManager alloc] initWithURL:[NSURL URLWithString:@"http://www.microfotos.com/pic/0/6/629/62954preview4.jpg"] fileName:@"image01.jpg" delegate:self];
+    LLDownloaderManager *manager = [[LLDownloaderManager alloc] initWithURL:[NSURL URLWithString:@"http://ww1.sinaimg.cn/bmiddle/b8249f32gw1e79qibjfqvg20b405gwpn.gif"] fileName:@"image010.jpg" delegate:self];
     [manager download];
 }
 
@@ -46,6 +47,5 @@
     }
     return _imageView;
 }
-
 
 @end
