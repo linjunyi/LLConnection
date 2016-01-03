@@ -11,12 +11,12 @@
 		3ED0C9E31C33DD1400A5EC06 /* LLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9E21C33DD1400A5EC06 /* LLAppDelegate.m */; };
 		3ED0C9E61C33DD1400A5EC06 /* LLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9E51C33DD1400A5EC06 /* LLViewController.m */; };
 		3ED0C9EB1C33DD1400A5EC06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0C9EA1C33DD1400A5EC06 /* Assets.xcassets */; };
-		3ED0C9EE1C33DD1400A5EC06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ED0C9EC1C33DD1400A5EC06 /* LaunchScreen.storyboard */; };
 		3ED0C9F91C33DD1400A5EC06 /* LLConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9F81C33DD1400A5EC06 /* LLConnectionTests.m */; };
 		3ED0CA041C33DD1400A5EC06 /* LLConnectionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0CA031C33DD1400A5EC06 /* LLConnectionUITests.m */; };
 		3ED0CA1A1C34028E00A5EC06 /* LLDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0CA191C34028E00A5EC06 /* LLDownloaderOperation.m */; };
 		3ED0CA1D1C3419A200A5EC06 /* LLDownloaderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0CA1C1C3419A200A5EC06 /* LLDownloaderManager.m */; };
 		3ED0CA221C341D6B00A5EC06 /* UIView+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0CA211C341D6B00A5EC06 /* UIView+Property.m */; };
+		3ED2D98B1C35359200D6DA31 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ED2D98A1C35359200D6DA31 /* Launch Screen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +44,6 @@
 		3ED0C9E41C33DD1400A5EC06 /* LLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLViewController.h; sourceTree = "<group>"; };
 		3ED0C9E51C33DD1400A5EC06 /* LLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLViewController.m; sourceTree = "<group>"; };
 		3ED0C9EA1C33DD1400A5EC06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3ED0C9ED1C33DD1400A5EC06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3ED0C9EF1C33DD1400A5EC06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3ED0C9F41C33DD1400A5EC06 /* LLConnectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLConnectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED0C9F81C33DD1400A5EC06 /* LLConnectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLConnectionTests.m; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		3ED0CA1E1C341D2500A5EC06 /* LLPch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLPch.pch; sourceTree = "<group>"; };
 		3ED0CA201C341D6B00A5EC06 /* UIView+Property.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Property.h"; sourceTree = "<group>"; };
 		3ED0CA211C341D6B00A5EC06 /* UIView+Property.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Property.m"; sourceTree = "<group>"; };
+		3ED2D98A1C35359200D6DA31 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +119,8 @@
 				3ED0CA181C34028E00A5EC06 /* LLDownloaderOperation.h */,
 				3ED0CA191C34028E00A5EC06 /* LLDownloaderOperation.m */,
 				3ED0C9EA1C33DD1400A5EC06 /* Assets.xcassets */,
-				3ED0C9EC1C33DD1400A5EC06 /* LaunchScreen.storyboard */,
 				3ED0C9EF1C33DD1400A5EC06 /* Info.plist */,
+				3ED2D98A1C35359200D6DA31 /* Launch Screen.xib */,
 				3ED0C9DE1C33DD1400A5EC06 /* Supporting Files */,
 			);
 			path = LLConnection;
@@ -229,6 +229,7 @@
 				TargetAttributes = {
 					3ED0C9DA1C33DD1400A5EC06 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = UECH3VPJ68;
 					};
 					3ED0C9F31C33DD1400A5EC06 = {
 						CreatedOnToolsVersion = 7.1;
@@ -265,8 +266,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ED0C9EE1C33DD1400A5EC06 /* LaunchScreen.storyboard in Resources */,
 				3ED0C9EB1C33DD1400A5EC06 /* Assets.xcassets in Resources */,
+				3ED2D98B1C35359200D6DA31 /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,17 +331,6 @@
 			targetProxy = 3ED0CA001C33DD1400A5EC06 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		3ED0C9EC1C33DD1400A5EC06 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3ED0C9ED1C33DD1400A5EC06 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3ED0CA061C33DD1400A5EC06 /* Debug */ = {
@@ -427,8 +417,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = LLPch.pch;
 				INFOPLIST_FILE = LLConnection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lin.LLConnection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,8 +431,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = LLPch.pch;
 				INFOPLIST_FILE = LLConnection/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lin.LLConnection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
