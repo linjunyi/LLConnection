@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E2F49751C40DD1F0052D0FE /* LLDownloaderTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2F49741C40DD1F0052D0FE /* LLDownloaderTask.m */; };
 		3ED0C9E01C33DD1400A5EC06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9DF1C33DD1400A5EC06 /* main.m */; };
 		3ED0C9E31C33DD1400A5EC06 /* LLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9E21C33DD1400A5EC06 /* LLAppDelegate.m */; };
 		3ED0C9E61C33DD1400A5EC06 /* LLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED0C9E51C33DD1400A5EC06 /* LLViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E2F49731C40DD1F0052D0FE /* LLDownloaderTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLDownloaderTask.h; sourceTree = "<group>"; };
+		3E2F49741C40DD1F0052D0FE /* LLDownloaderTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLDownloaderTask.m; sourceTree = "<group>"; };
 		3ED0C9DB1C33DD1400A5EC06 /* LLConnection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLConnection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ED0C9DF1C33DD1400A5EC06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3ED0C9E11C33DD1400A5EC06 /* LLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLAppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				3ED0C9E21C33DD1400A5EC06 /* LLAppDelegate.m */,
 				3ED0C9E41C33DD1400A5EC06 /* LLViewController.h */,
 				3ED0C9E51C33DD1400A5EC06 /* LLViewController.m */,
+				3E2F49731C40DD1F0052D0FE /* LLDownloaderTask.h */,
+				3E2F49741C40DD1F0052D0FE /* LLDownloaderTask.m */,
 				3ED0CA1B1C3419A200A5EC06 /* LLDownloaderManager.h */,
 				3ED0CA1C1C3419A200A5EC06 /* LLDownloaderManager.m */,
 				3ED0CA181C34028E00A5EC06 /* LLDownloaderOperation.h */,
@@ -292,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E2F49751C40DD1F0052D0FE /* LLDownloaderTask.m in Sources */,
 				3ED0C9E61C33DD1400A5EC06 /* LLViewController.m in Sources */,
 				3ED0CA221C341D6B00A5EC06 /* UIView+Property.m in Sources */,
 				3ED0C9E31C33DD1400A5EC06 /* LLAppDelegate.m in Sources */,
@@ -446,6 +452,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LLConnectionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lin.LLConnectionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +465,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LLConnectionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lin.LLConnectionTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -469,6 +477,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = LLConnectionUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lin.LLConnectionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -481,6 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = LLConnectionUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lin.LLConnectionUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
