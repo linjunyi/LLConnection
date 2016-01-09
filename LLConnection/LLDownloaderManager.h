@@ -16,7 +16,9 @@
 
 @interface LLDownloaderManager : NSObject
 
-- (instancetype)initWithURL:(NSURL *)url fileName:(NSString *)fileName delegate:(id<LLDownloadDelegate>)delegate;
-- (void)download;
++ (instancetype)shareManager;
+- (void)addTaskWithURL:(NSURL *)url fileName:(NSString *)fileName delegate:(id<LLDownloadDelegate>)delegate;
+- (void)cancelTaskWithFileName:(NSString *)fileName;
+- (void)cancelAllTask;
 
 @end
